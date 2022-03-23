@@ -26,6 +26,8 @@ source-repository head
 library
   exposed-modules:
       DeBruijn
+      DeBruijn_Reduction
+      IntersectionTypes
       STT_Evaluation
       STT_Inference
       TypeInhabitance
@@ -36,6 +38,7 @@ library
   build-depends:
       base >=4.7 && <5
     , containers
+    , mtl
   default-language: Haskell2010
 
 executable tapl-mse-jb-exe
@@ -48,6 +51,7 @@ executable tapl-mse-jb-exe
   build-depends:
       base >=4.7 && <5
     , containers
+    , mtl
     , tapl-mse-jb
   default-language: Haskell2010
 
@@ -62,5 +66,6 @@ test-suite tapl-mse-jb-test
   build-depends:
       base >=4.7 && <5
     , containers
+    , mtl
     , tapl-mse-jb
   default-language: Haskell2010
